@@ -12,7 +12,7 @@ from telegram.ext import (
 )
 
 # --- AYARLAR ---
-BOT_TOKEN = "8995026184:AAGXUbOLs14YWaZCVuBThhrqpWKzOnJLlEI"
+BOT_TOKEN = "BOT_TOKEN"
 CHANNEL_USERNAME = "@hapsolmusumarsiv"
 CONTACT_USERNAME = "@HapsoImusum"
 OWNER_ID = 8376729976  # Kurucu ID
