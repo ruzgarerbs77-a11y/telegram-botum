@@ -12,8 +12,8 @@ from telegram.ext import (
 )
 
 # --- AYARLAR ---
+# Token Render Environment üzerinden güvenli şekilde okunur
 BOT_TOKEN = os.getenv("BOT_TOKEN")
-
 CHANNEL_USERNAME = "@hapsolmusumarsiv"
 CONTACT_USERNAME = "@HapsoImusum"
 OWNER_ID = 8376729976  # Kurucu ID
@@ -801,6 +801,10 @@ async def add_stock(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # --- BOTU ÇALIŞTIR ---
 def main():
+    if not BOT_TOKEN:
+        print("HATA: BOT_TOKEN ortam değişkeni bulunamadı! Render Environment alanını kontrol edin.")
+        return
+
     app = (
         ApplicationBuilder()
         .token(BOT_TOKEN)
